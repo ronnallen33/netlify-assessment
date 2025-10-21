@@ -1,0 +1,5 @@
+# 301 redirect: /netlify/<anything> → Google search for <anything>
+/netlify/*    https://www.google.com/search?q=:splat    301
+
+# Proxy redirect: /api/<anything> → httpbin.org/<anything>
+/api/*        https://httpbin.org/:splat                200
