@@ -245,7 +245,8 @@
                                 <pre><code>export const handler = async () => {
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: "Hello from Netlify Functions!" })
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: "Hello World" })
   };
 };</code></pre>
 
