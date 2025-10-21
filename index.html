@@ -25,10 +25,211 @@
     </header>
 
     <main>
-      <h2 class="mb-4">Questions & Answers</h2>
-      <p class="alert alert-info">
-        ✅ I’ll post my written answers to the assessment questions here.
-      </p>
+      <main>
+  <h2 class="mb-4 text-center">Assessment Questions & Answers</h2>
+
+  <div class="accordion" id="assessmentAccordion">
+
+    <!-- Q1 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. How I made my site and why I chose the tools I did
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#assessmentAccordion">
+        <div class="accordion-body">
+          I created this website using plain HTML, CSS, and Bootstrap 5, hosted on Netlify. I chose these tools for their simplicity and fast deployment. Bootstrap provided responsive layout and clean styling without needing a complex build process. I stored my code in a public GitHub repository and linked it directly to Netlify for continuous deployment.
+          <br><br>
+          One challenge I faced was an error while pushing my files to GitHub (“author identity unknown”). I fixed it by configuring my Git username and email using Git commands (<code>git config --global user.name</code> and <code>git config --global user.email</code>). After that, I successfully deployed to Netlify.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. My impression of the service — feedback and highlights
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#assessmentAccordion">
+        <div class="accordion-body">
+          Netlify is very user-friendly. The automatic deployment from GitHub commits saves a lot of time and effort. I was impressed by the clarity of the dashboard and how fast builds complete even for first-time users.
+          <br><br>
+          For improvement, I think it would help beginners if Netlify displayed short “probable cause” hints for build failures. This would make troubleshooting easier without digging through full logs.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3. My 5 favorite and 5 least favorite activities
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#assessmentAccordion">
+        <div class="accordion-body">
+          <strong>Favorites:</strong>
+          <ol>
+            <li>Create video tutorials for specific features or use cases</li>
+            <li>Develop a code example to share with a customer</li>
+            <li>Help train and onboard new teammates</li>
+            <li>Submit bug reports or propose fixes</li>
+            <li>Suggest workflow or process improvements</li>
+          </ol>
+          <strong>Least Favorites:</strong>
+          <ol>
+            <li>Respond to customers on Twitter</li>
+            <li>Manage communications during service outages</li>
+            <li>Engage multiple users at once via live chat</li>
+            <li>Set up local copies of several frameworks only for debugging</li>
+            <li>Manage a support team</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          4. Example of well-written developer documentation
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#assessmentAccordion">
+        <div class="accordion-body">
+          I find the <a href="https://nextjs.org/docs" target="_blank" rel="noopener">Next.js documentation</a> very well done. It’s clear, well-structured, and beginner-friendly. Each page has real-world examples, consistent navigation, and links to sandbox demos. It also shows version tags, which helps developers avoid confusion when using older versions.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          5. Two major DNS challenges for less-technical users
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#assessmentAccordion">
+        <div class="accordion-body">
+          <p><strong>1. Confusion between record types (A, CNAME, ALIAS)</strong> — Many hosting customers struggle to know which record type to use, especially for apex domains where CNAMEs aren’t allowed. This often leads to broken connections or verification delays.</p>
+          <p><strong>2. Propagation and caching</strong> — DNS changes can take hours due to TTL values. Less-technical users often expect instant updates and think something went wrong when it’s actually just propagation delay.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSix">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          6. Troubleshooting “Build script returned non-zero exit code: 2”
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#assessmentAccordion">
+        <div class="accordion-body">
+          <p><strong>Troubleshooting steps:</strong></p>
+          <ul>
+            <li>Check build logs from the top to find the first actual error message.</li>
+            <li>Verify build command, publish directory, and environment variables in Site Settings → Build & Deploy.</li>
+            <li>Check for lockfile mismatches (npm vs yarn) and dependency errors.</li>
+            <li>Clear cache and redeploy to ensure no stale files cause issues.</li>
+          </ul>
+          <p><strong>First response to customer:</strong></p>
+          <blockquote>
+            Hi there! Thanks for reaching out — I see your build failed with exit code 2. This means something in your build script encountered an error.  
+            Please check that your build command and publish directory match your framework’s structure, and try clearing cache and redeploying.  
+            If you still encounter issues, could you share the first few lines of the error in your build log so we can pinpoint the cause faster?
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSeven">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          7. Redirect and proxy setup examples
+        </button>
+      </h2>
+      <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#assessmentAccordion">
+        <div class="accordion-body">
+          <p><strong>301 redirect rule (_redirects file):</strong></p>
+          <pre><code>/netlify/*  https://www.google.com/search?q=:splat  301</code></pre>
+          <p><strong>Proxy redirect rule (added to _redirects or netlify.toml):</strong></p>
+          <pre><code>/api/*  https://httpbin.org/:splat  200</code></pre>
+          <p>These redirect rules tell Netlify to permanently redirect requests or proxy them to another service.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingEight">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+          8. Deploying a function (Hello World)
+        </button>
+      </h2>
+      <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#assessmentAccordion">
+        <div class="accordion-body">
+          <p>I created a simple function in <code>netlify/functions/hello.js</code>:</p>
+          <pre><code>export const handler = async () => {
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: "Hello from Netlify Functions!" })
+  };
+};</code></pre>
+          <p>The function worked on first try and responded correctly at <code>/.netlify/functions/hello</code>. I also tested with a custom redirect path (<code>/api/hello</code>) and it returned JSON successfully.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingNine">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+          9. Responding to a severe security issue report
+        </button>
+      </h2>
+      <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#assessmentAccordion">
+        <div class="accordion-body">
+          <p><strong>Initial investigation:</strong> I would immediately acknowledge receipt of the report, log details privately, and alert the internal engineering/security team. Then, I’d check if the issue can be safely reproduced and look for potential impacts or access points.</p>
+          <p><strong>Professional response to the reporter:</strong></p>
+          <blockquote>
+            Thank you for bringing this potential security issue to our attention. We take reports like this very seriously and have begun an internal investigation. Our team will provide an update as soon as we have more details. Please share any additional reproduction steps or affected endpoints if possible. We truly appreciate your help in keeping our platform secure.
+          </blockquote>
+          <p><strong>Escalation:</strong> If confirmed severe, I would notify leadership, activate the incident response process, restrict access if necessary, and prepare coordinated communication and mitigation steps.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /accordion -->
+  <section class="mt-5">
+  <h3>Redirects & Functions — Quick Tests</h3>
+  <ul>
+    <li>
+      301 redirect example:
+      <a href="/netlify/anything" class="link-primary">/netlify/anything</a>
+      (should go to Google search for “anything”)
+    </li>
+    <li>
+      Proxy example:
+      <a href="/api/get" class="link-primary">/api/get</a>
+      (should return JSON from httpbin.org)
+    </li>
+    <li>
+      Function (default path):
+      <a href="/.netlify/functions/hello" class="link-primary">/.netlify/functions/hello</a>
+    </li>
+    <li>
+      Function (friendly path, if you added it):
+      <a href="/api/hello" class="link-primary">/api/hello</a>
+    </li>
+  </ul>
+</section>
+</main>
+
     </main>
 
     <footer class="text-center mt-5 pt-3 border-top">

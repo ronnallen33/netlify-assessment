@@ -3,3 +3,6 @@
 
 # Proxy redirect: /api/<anything> → httpbin.org/<anything>
 /api/*        https://httpbin.org/:splat                200
+
+# Function redirect: /api/hello → /.netlify/functions/hello
+/api/hello    /.netlify/functions/hello                 200
